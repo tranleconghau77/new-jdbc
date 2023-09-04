@@ -1,2 +1,2 @@
 <%@ include file="/common/taglib.jsp" %>
-<c:redirect url = "/HomeController"/>
+<c:redirect url = "/trang-chu"/>

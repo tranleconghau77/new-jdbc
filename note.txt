@@ -1,1 +1,18 @@
 Password: H@u772001
+
+sử dụng decorator bằng sitemesh cho việc apply giao diện cho route nào
+		java servlet weld, beans
+		jdbc connect database
+		generic
+		dependency injection
+		sử dụng jackson để handle json
+		jsp truyền data lên server theo kiểu submitform() 
+
+
+model giữa controller và view, giữa webservices và database
+model giữa server(servlet) vs client(jsp)
+
+
+String vs StringBuffer
+String immutable concat string thì tốn nhiều bộ nhớ vì phải tạo thêm nhiều instance
+StrinBuffer mutable	nối chuỗi không cần tạo instance

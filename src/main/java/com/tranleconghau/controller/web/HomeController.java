@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.tranleconghau.dao.INewDAO;
+import com.tranleconghau.model.NewsModel;
 import com.tranleconghau.model.UserModel;
 import com.tranleconghau.services.ICategoryService;
 import com.tranleconghau.services.INewService;
@@ -41,14 +42,22 @@ public class HomeController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		UserModel userModel = new UserModel();
-		userModel.setFullName("1111111111");
-		request.setAttribute("model", userModel);
 		
-		long categoryId = 1L;
-		request.setAttribute("categories", categoryService.findAll());
-		request.setAttribute("news", newService.findByCategoryId(categoryId));
+//		String title = "Bài viết 5";
+//		String thumbnail = "Thumbnail của bài viết 5";
+//		String shortDescription = "Mô tả của bài viết 5";
+//		String content = "Nội dung của bài viết 5";
+//		Long categoryId = 2L;
+//		
+//		NewsModel newModel = new NewsModel();
+//		newModel.setCategoryId(categoryId);
+//		newModel.setTitle(title);
+//		newModel.setThumbnail(thumbnail);
+//		newModel.setContent(content);
+//		newModel.setShortDescription(shortDescription);
+//		
+//		newService.save(newModel);
+//		request.setAttribute("categories", categoryService.findAll());
 		RequestDispatcher rd = request.getRequestDispatcher("views/web/home.jsp");
 		rd.forward(request, response);
 	}

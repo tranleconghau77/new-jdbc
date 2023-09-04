@@ -1,26 +1,37 @@
  package com.tranleconghau.model;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
-public class AbstractModel {
+
+public class AbstractModel<T> {
 	
 	private long id;
-	private Timestamp createDate; 
+	private Timestamp createdDate; 
 	private Timestamp modifiedDate; 
 	private String createdBy;
 	private String modifiedBy;
+	private long[] ids;
+	private List<T> listResult = new ArrayList<>();
 	
+	public List<T> getListResult() {
+		return listResult;
+	}
+	public void setListResult(List<T> listResult) {
+		this.listResult = listResult;
+	}
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
 	}
-	public Timestamp getCreateDate() {
-		return createDate;
+	public Timestamp getCreatedDate() {
+		return createdDate;
 	}
-	public void setCreateDate(Timestamp createDate) {
-		this.createDate = createDate;
+	public void setCreatedDate(Timestamp createDate) {
+		this.createdDate = createDate;
 	}
 	public Timestamp getModifiedDate() {
 		return modifiedDate;
@@ -39,6 +50,12 @@ public class AbstractModel {
 	}
 	public void setModifiedBy(String modifiedBy) {
 		this.modifiedBy = modifiedBy;
+	}
+	public long[] getIds() {
+		return ids;
+	}
+	public void setIds(long[] ids) {
+		this.ids = ids;
 	}
 
 	

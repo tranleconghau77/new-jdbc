@@ -1,12 +1,16 @@
 package com.tranleconghau.model;
 
-public class NewsModel extends AbstractModel {
+public class NewsModel extends AbstractModel<NewsModel> {
 	
 	private String title;
 	private String thumbnail;
-	private String shortdecription;
+	private String shortDescription;
 	private String content;
-	private long categoryid;
+	private long categoryId;
+	private int page;
+	private int maxPageItems;
+	private int totalPage;
+	
 	
 	public String getTitle() {
 		return title;
@@ -20,11 +24,11 @@ public class NewsModel extends AbstractModel {
 	public void setThumbnail(String thumbnail) {
 		this.thumbnail = thumbnail;
 	}
-	public String getShortdecription() {
-		return shortdecription;
+	public String getShortDescription() {
+		return shortDescription;
 	}
-	public void setShortdecription(String shortdecription) {
-		this.shortdecription = shortdecription;
+	public void setShortDescription(String shortDescription) {
+		this.shortDescription = shortDescription;
 	}
 	public String getContent() {
 		return content;
@@ -32,11 +36,29 @@ public class NewsModel extends AbstractModel {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public long getCategoryid() {
-		return categoryid;
+	public long getCategoryId() {
+		return categoryId;
 	}
-	public void setCategoryid(long categoryid) {
-		this.categoryid = categoryid;
+	public void setCategoryId(long categoryId) {
+		this.categoryId = categoryId;
+	}
+	public int getPage() {
+		return page;
+	}
+	public void setPage(int page) {
+		this.page = page;
+	}
+	public int getMaxPageItems() {
+		return maxPageItems;
+	}
+	public void setMaxPageItems(int maxPageItems) {
+		this.maxPageItems = maxPageItems;
+	}
+	public int getTotalPage() {
+		return totalPage;
+	}
+	public void setTotalPage(int totalPage) {
+		this.totalPage = totalPage;
 	}
 	
 	
